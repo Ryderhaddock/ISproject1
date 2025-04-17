@@ -1,0 +1,219 @@
+/* Import Google Fonts: Open Sans for body, Roboto Slab for headings */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Basic styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #3a3a3a;
+    margin: 0;
+    min-height: 100vh;
+    /* Add padding to prevent content hiding under fixed links */
+    padding-top: 60px; /* Adjust if needed based on link size */
+    padding-bottom: 60px; /* Adjust if needed based on link size */
+
+    /* *** SIMPLIFIED BACKGROUND *** */
+    background-color: #e0f2e9; /* Simple light green background */
+}
+
+/* Main content container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 35px;
+    background-color: #f8f8f6; /* Off-white container background */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border: 1px solid #d8dcd4;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* *** INCREASED H1 FONT SIZE *** */
+h1 {
+    font-family: 'Roboto Slab', serif;
+    color: #40514e;
+    text-align: center;
+    font-size: 2.8em; /* Significantly larger title */
+    margin-bottom: 30px; /* Adjusted bottom margin */
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #40514e;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.container > p {
+     text-align: center;
+     line-height: 1.7;
+     margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    padding: 5px;
+    background-color: #fff;
+}
+
+ol, ul {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: left;
+    /* display: inline-block; -- Consider removing if causing alignment issues */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 45px; /* Keep padding for indent */
+    line-height: 1.7;
+}
+
+/* Ensure lists within the container are centered if using inline-block */
+.container ol, .container ul {
+    display: inline-block;
+    text-align: left; /* Keep list text left-aligned */
+}
+/* If lists should take full width within container padding: */
+/*
+.container ol, .container ul {
+    display: block;
+    max-width: 100%; /* Adjust max-width as needed */
+/* margin-left: 0; /* Reset auto margins */
+/* margin-right: 0;
+/* } */
+
+
+li {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+li p {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.quick-nav {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    background-color: #607d68;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin: 5px 5px;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link:hover {
+    background-color: #506a58;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+.nav-link:active {
+    transform: translateY(0px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 700px; /* Limit max width */
+    margin: 30px auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tableau-viz-container {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    min-height: 550px; /* Adjust or remove if Tableau height is managed by JS */
+    clear: both;
+    /* overflow: hidden; */ /* Consider adding if Tableau still overflows */
+}
+
+.footer-nav {
+     text-align: center;
+     margin-top: 45px;
+     padding-top: 25px;
+     border-top: 1px solid #d8dcd4;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #d8dcd4;
+    margin: 55px auto;
+    width: 75%;
+}
+
+/* Fixed corner link styles */
+.corner-link {
+    position: fixed;
+    /* Default position is right - specific classes below override left/right */
+    right: 15px;
+    z-index: 1000;
+    text-decoration: none;
+    background-color: rgba(96, 125, 104, 0.85);
+    color: white;
+    padding: 7px 13px;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    opacity: 0.75;
+    transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.corner-link:hover {
+    background-color: rgba(80, 106, 88, 1);
+    opacity: 1.0;
+    transform: scale(1.05);
+}
+
+.nav-link-top-right {
+    top: 25px;
+    /* 'right: 15px' is inherited from .corner-link */
+}
+
+.nav-link-bottom-right {
+    bottom: 25px;
+    /* 'right: 15px' is inherited from .corner-link */
+}
+
+/* ======= STYLE FOR TOP-LEFT LINK ======= */
+.nav-link-top-left {
+    top: 25px;      /* Position from top */
+    left: 15px;     /* Position from left */
+    right: auto;    /* Override default 'right' positioning */
+}
+/* ======================================= */
+
